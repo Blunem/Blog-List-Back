@@ -1,0 +1,117 @@
+###
+GET http://localhost:3003/api/users
+
+###
+GET http://localhost:3003/api/blogs
+
+
+###
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+    "username": "Blunem",
+    "name": "Guadalupe",
+    "password": "$Fullstack2021"
+}
+###
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+    "username": "Snow",
+    "name": "Luis",
+    "password": "$Fullstack2021"
+}
+###
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+    "username": "Jahersa",
+    "name": "Javier",
+    "password": "$Fullstack2021"
+}
+
+###
+POST http://localhost:3003/api/login
+Content-Type: application/json
+
+{
+    "username": "Blunem",
+    "password": "$Fullstack2021"
+}
+
+###
+POST http://localhost:3001/api/login
+Content-Type: application/json
+
+{
+    "username": "Kracatoa",
+    "password": "$Fullstack2021"
+}
+
+###
+POST http://localhost:3001/api/blogs
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJsdW5lbSIsImlkIjoiNjBjNzgwMTk4NDQ2NWQxNmVmNjE4MGEzIiwiaWF0IjoxNjIzNjkzOTk0LCJleHAiOjE2MjM2OTQ1OTR9.ZZFHdw2L2fqA-dSpxxDCCExAwahSv7D4WiIjzXs8E1Y
+
+{
+    "title": "Science",
+    "author": "Guadalupe V.",
+    "url" : "http://www.ghsystems.com",
+    "likes" : 17,
+    "userId" : "60c24f153022ba1e66c13232"
+}
+
+###
+POST http://localhost:3001/api/blogs
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJsdW5lbSIsImlkIjoiNjBjNzgwMTk4NDQ2NWQxNmVmNjE4MGEzIiwiaWF0IjoxNjIzNjkzOTk0LCJleHAiOjE2MjM2OTQ1OTR9.ZZFHdw2L2fqA-dSpxxDCCExAwahSv7D4WiIjzXs8E1Y
+
+{
+    "title": "It seems to work",
+    "author": "Guadalupe V.",
+    "url" : "http://www.ghsystems.com",
+    "likes" : 17,
+    "userId" : "60c24f153022ba1e66c13232"
+}
+
+###
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJsdW5lbSIsImlkIjoiNjBjNzgwMTk4NDQ2NWQxNmVmNjE4MGEzIiwiaWF0IjoxNjIzODAyMDIzLCJleHAiOjE2MjM4MDI2MjN9.V6nY5cU3fg3igWiTf3p6w_rS-uscNa3Bl41YXaJpr4E
+
+{
+    "title": "It also  worked",
+    "author": "Kracatoa",
+    "url" : "http://www.ghsystems.com",
+    "likes" : 17,
+    "userId" : "60c24f153022ba1e66c13232"
+}
+
+###
+DELETE  http://localhost:3001/api/blogs/60c79ac200f271194524f68e
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJsdW5lbSIsImlkIjoiNjBjNzgwMTk4NDQ2NWQxNmVmNjE4MGEzIiwiaWF0IjoxNjIzNjkzOTk0LCJleHAiOjE2MjM2OTQ1OTR9.ZZFHdw2L2fqA-dSpxxDCCExAwahSv7D4WiIjzXs8E1Y
+
+###
+DELETE  http://localhost:3001/api/blogs/60c79ad000f271194524f68f
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IktyYWNhdG9hIiwiaWQiOiI2MGM3ODIyYTg0NDY1ZDE2ZWY2MTgwYTciLCJpYXQiOjE2MjM2OTQwNDYsImV4cCI6MTYyMzY5NDY0Nn0.c25ZXCgD2KuZWoC9haM37dyyZ-6YccvTpiTqZ18uXXk
+
+
+###
+POST http://localhost:3003/api/blogs/comment/611bd541cb96431738631518
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJsdW5lbSIsImlkIjoiNjBjNzgwMTk4NDQ2NWQxNmVmNjE4MGEzIiwiaWF0IjoxNjI5MjIyMzY3LCJleHAiOjE2MjkyMjI5Njd9.8gsn5bcToexKPVmskj4niutJumgubGi0Ayy5rVQ_e_U
+
+{
+    "content": "Increible, me ayudó mucho"
+}
+
+###
+GET http://localhost:3003/api/blogs
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJsdW5lbSIsImlkIjoiNjExYmZmODQ5MzAwMDkxZWY2ZGE4MTM2IiwiaWF0IjoxNjI5NDg2NjYyLCJleHAiOjE2Mjk0ODcyNjJ9.2Npeh1urXBx3xTdYnnw1AWFot7nC2g_-3I2U7eQ4UAk
+
+

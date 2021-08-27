@@ -1,0 +1,71 @@
+POST http://localhost:3001/api/users
+Content-Type: application/json
+
+{
+    "username": "root",
+    "name": "Omar V.",
+    "password": "@Charay2020"
+}
+
+###
+POST http://localhost:3001/api/users
+Content-Type: application/json
+
+{
+    "username": "Blunem",
+    "name": "Guadalupe V.",
+    "password": "@fullstack20"
+}
+
+###
+GET http://localhost:3001/api/users
+
+###
+POST http://localhost:3001/api/blogs
+Content-Type: application/json
+
+{
+    "title": "Deep Learning is easy",
+    "author": "Omar V.",
+    "url" : "http://www.genbeta.com",
+    "likes" : 13,
+    "userId" : "60c24f123022ba1e66c13231"
+}
+
+###
+POST http://localhost:3001/api/blogs
+Content-Type: application/json
+
+{
+    "title": "Computer Vision Done Right ",
+    "author": "Omar V.",
+    "url" : "http://www.computervision.com",
+    "likes" : 9,
+    "userId" : "60c24f123022ba1e66c13231"
+}
+
+###
+POST http://localhost:3001/api/blogs
+Content-Type: application/json
+
+{
+    "title": "Science as a candle in the dark",
+    "author": "Guadalupe V.",
+    "url" : "http://www.ghsystems.com",
+    "likes" : 17,
+    "userId" : "60c24f153022ba1e66c13232"
+}
+
+###
+GET http://localhost:3003/api/blogs
+
+###
+GET http://localhost:3003/api/users
+
+
+POST http://localhost:3001/api/blogs/comment/611bd541cb96431738631518
+Content-Type: application/json
+
+{
+    content: "Increible, me ayudó mucho"
+}

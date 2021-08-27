@@ -1,0 +1,37 @@
+###
+POST http://localhost:3001/api/blogs
+Content-Type: application/json
+
+{
+    "title" : "Hello world",
+    "author" : "Omar G.",
+    "url": "https://www.xataka.com",
+    "likes": 9
+}
+
+###
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+
+{
+    "title" : "Hello life",
+    "author" : "Gudadalupe V.",
+    "url": "https://www.applesfera.com",
+    "likes": 13
+}
+
+###
+PUT http://localhost:3003/api/blogs/60c95e01434fe003e773cd34
+Content-Type: application/json
+
+{
+    "id": "60c95e01434fe003e773cd34",
+    "user": "60c7801984465d16ef6180a3",
+    "title" : "Science as a candle in the dark",
+    "author" : "Gudadalupe V.",
+    "url": "https://www.applesfera.com",
+    "likes": 19
+}
+
+###
+GET http://localhost:3003/api/blogs
